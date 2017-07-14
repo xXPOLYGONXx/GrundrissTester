@@ -31,3 +31,4 @@ H:\Visual Studio 2012\ImageDetectionUtility\ImageDetectionUtility\bin\Release\Op
 H:\Visual Studio 2012\ImageDetectionUtility\ImageDetectionUtility\bin\Release\OpenCvSharp.UserInterface.xml
 H:\Visual Studio 2012\ImageDetectionUtility\ImageDetectionUtility\obj\Release\ImageDetectionUtility.dll
 H:\Visual Studio 2012\ImageDetectionUtility\ImageDetectionUtility\obj\Release\ImageDetectionUtility.pdb
+H:\Visual Studio 2012\ImageDetectionUtility\ImageDetectionUtility\obj\Release\ImageDetectionUtility.csprojResolveAssemblyReference.cache

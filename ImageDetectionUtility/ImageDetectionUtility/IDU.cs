@@ -149,7 +149,7 @@ namespace ImageDetectionUtility
         /// Der Parameter blackpercentage gibt an ab welchem prozentualen Schwarzanteil eine Wand zwischen zwei Punkten gezogen wird.
         /// Empfohlene Werte 80-95
         /// </summary>
-        public static List<int[]> getlines(Mat imageIn, List<int[]> cornerlist, int blackpercentage)
+        public static List<int[]> getlines(Mat imageIn, List<int[]> cornerlist, double blackpercentage)
         {
             imageIn.SaveImage("temp.png");
             Mat origimage = new Mat("temp.png",ImreadModes.Color);
@@ -176,7 +176,7 @@ namespace ImageDetectionUtility
             return linelist;
         }
         //____________________________________________________________________________________
-        private static void getlinesmt(Mat origimage, List<int[]> cornerlist2, int[] corner, ref List<int[]> linelist,int blackpercentage)
+        private static void getlinesmt(Mat origimage, List<int[]> cornerlist2, int[] corner, ref List<int[]> linelist,double blackpercentage)
         {          
             foreach (int[] secondcorner in cornerlist2)
             {
@@ -198,8 +198,8 @@ namespace ImageDetectionUtility
                             counter++;
                         }
                     }
-                    //if (counter > linepoints.Count * (blackpercentage/100))
-                    if (counter > (linepoints.Count * 0.97))
+                    if (counter > linepoints.Count * (blackpercentage/100))
+                    //if (counter > (linepoints.Count * 0.97))
                     {
                         //imageIn.Line(corner[0], corner[1], secondcorner[0], secondcorner[1], new Scalar(0, 0, 0), 1);
                         line[0] = corner[0];
@@ -451,7 +451,7 @@ namespace ImageDetectionUtility
         /// Der Parameter blackpercentage gibt an ab welchem prozentualen Schwarzanteil eine Wand zwischen zwei Punkten gezogen wird.
         /// Empfohlene Werte 80-95
         /// </summary>
-        public static List<int[]> ProcessImage(Mat Uinput,int cornerdistance, int blackpercentage)
+        public static List<int[]> ProcessImage(Mat Uinput,int cornerdistance, double blackpercentage)
         {
             Uinput.SaveImage("temp.png");
             Mat input = new Mat("temp.png", ImreadModes.GrayScale);

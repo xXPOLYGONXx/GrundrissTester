@@ -23,7 +23,7 @@
             Die Ecken werden ebenfalls in der Cornerlist abgespeichert
             </summary>
         </member>
-        <member name="M:ImageDetectionUtility.IDU.getlines(OpenCvSharp.Mat,System.Collections.Generic.List{System.Int32[]},System.Int32)">
+        <member name="M:ImageDetectionUtility.IDU.getlines(OpenCvSharp.Mat,System.Collections.Generic.List{System.Int32[]},System.Double)">
             <summary>
             Bestimmt die Linien im Eingangsbild anhand der Eckenliste und gibt Eine Liste der gefundenen Linien zurück.
             Läuft sehr rechenintensiv mit Multithreading!!!
@@ -55,7 +55,7 @@
             in onlyedges finden sich nur als relevant befundene Punkte (invertiertes Ergebnis)
             </summary>
         </member>
-        <member name="M:ImageDetectionUtility.IDU.ProcessImage(OpenCvSharp.Mat,System.Int32,System.Int32)">
+        <member name="M:ImageDetectionUtility.IDU.ProcessImage(OpenCvSharp.Mat,System.Int32,System.Double)">
             <summary>
             Filter den Grundriss auf relevante Details. Und erkennt die Wände.
             Als Ergebnis bekommt man eine Liste mit allen gefundenen Wänden
