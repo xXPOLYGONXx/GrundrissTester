@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImageDetectionUtility</name>
+    </assembly>
+    <members>
+        <member name="T:ImageDetectionUtility.IDU">
+            <summary>
+            Diese Klasse stellt die Funktionen zur Erfassung von Grundrissen zur Verfügung
+            </summary>
+        </member>
+        <member name="M:ImageDetectionUtility.IDU.getcorners(OpenCvSharp.Mat,OpenCvSharp.Mat@,System.Collections.Generic.List{System.Int32[]}@)">
+            <summary>
+            Errechnet die Ecken in einem Bild und speichert diese in der Cornerlist.
+            Weiterhin wird ein Bild erstellt auf dem die gefundenen Ecken eingezeichnetsind (src)
+            im onlyedges Bild sind nur die Ecken markiert.
+            </summary>
+        </member>
+        <member name="M:ImageDetectionUtility.IDU.IDTheCorners(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Collections.Generic.List{System.Int32[]})">
+            <summary>
+            Diese Funktion Umkreist alle Ecken aus dem Bild "binary" im Bild "image"
+            binary ist ein bild auf dem nur die Ecken als Punkte eingezeichnet sind
+            Die Ecken werden ebenfalls in der Cornerlist abgespeichert
+            </summary>
+        </member>
+        <member name="M:ImageDetectionUtility.IDU.getlines(OpenCvSharp.Mat,System.Collections.Generic.List{System.Int32[]},System.Double)">
+            <summary>
+            Bestimmt die Linien im Eingangsbild anhand der Eckenliste und gibt Eine Liste der gefundenen Linien zurück.
+            Läuft sehr rechenintensiv mit Multithreading!!!
+            Der Parameter blackpercentage gibt an ab welchem prozentualen Schwarzanteil eine Wand zwischen zwei Punkten gezogen wird.
+            Empfohlene Werte 80-95
+            </summary>
+        </member>
+        <member name="M:ImageDetectionUtility.IDU.makeSW(OpenCvSharp.Mat)">
+            <summary>
+            verwandelt das Eingangsbild in ein Bild mit den Farbwerten 0 und 255
+            </summary>
+        </member>
+        <member name="M:ImageDetectionUtility.IDU.drawLineArray(OpenCvSharp.Mat,System.Collections.Generic.List{System.Int32[]})">
+            <summary>
+            zeichnet die Linien aus der Liste in das übergebene Bild und gibt dieses dann zurück
+            </summary>
+        </member>
+        <member name="M:ImageDetectionUtility.IDU.reducecornerlist(System.Collections.Generic.List{System.Int32[]},System.Int32)">
+            <summary>
+            reduziert die eingegebene Eckenliste indem Gruppierungen zusammengefasst werden
+            Der Parameter Cornerdistance gibt an ab welcher Distanz Ecken zusammengefasst werden.
+            Wert 0-5 --> je nach Auflösung sehr genaue Wandfindung (Performance sinkt)
+            Wert 5-20 --> je nach Auflösung relativ ungenaue Wandfindung (Performance steigt drastisch)
+            </summary>
+        </member>
+        <member name="M:ImageDetectionUtility.IDU.filterimage(OpenCvSharp.Mat@,OpenCvSharp.Mat@,System.Collections.Generic.List{System.Int32[]}@)">
+            <summary>
+            Filter den Grundriss auf relevante Details. Ausgegeben wird das Ergebnis im Bild src
+            in onlyedges finden sich nur als relevant befundene Punkte (invertiertes Ergebnis)
+            </summary>
+        </member>
+        <member name="M:ImageDetectionUtility.IDU.ProcessImage(OpenCvSharp.Mat,System.Int32,System.Double)">
+            <summary>
+            Filter den Grundriss auf relevante Details. Und erkennt die Wände.
+            Als Ergebnis bekommt man eine Liste mit allen gefundenen Wänden
+            Uinput ist das EIngangsbild
+            Der Parameter Cornerdistance gibt an ab welcher Distanz Ecken zusammengefasst werden.
+            Wert 0-5 --> je nach Auflösung sehr genaue Wandfindung (Performance sinkt)
+            Wert 5-20 --> je nach Auflösung relativ ungenaue Wandfindung (Performance steigt drastisch)
+            
+            Der Parameter blackpercentage gibt an ab welchem prozentualen Schwarzanteil eine Wand zwischen zwei Punkten gezogen wird.
+            Empfohlene Werte 80-95
+            </summary>
+        </member>
+    </members>
+</doc>
