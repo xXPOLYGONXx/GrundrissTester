@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GrundrissTester")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Investitionsbank Berlin")]
 [assembly: AssemblyProduct("GrundrissTester")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright © Investitionsbank Berlin 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("963caa91-c87f-41a3-854c-3138887b794d")]
+[assembly: Guid("26392bc3-4d01-4b63-bd1b-b2799eca6c9b")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
